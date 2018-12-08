@@ -19,6 +19,18 @@ In addition, there are an estimated 19,000-20,000 human protein-coding genes, in
 
 ## PCA: Principle Components Analysis
 
+PCA is widely used in high dimension calculations such as image processing. PCA is a linear transformation method. It preserves the correlation between point x and y after transformation. PCA can reduce 4 or higher dimension graph to 2D. 
+
+1. Let’s take a expression matrix for 6 mouse samples as an example. We will only use two genes for illustration.
+
+2. The data set is first moved so that its center is at origin. Then PCA calculates the top components with the highest variations in the data. What it does is to first fit a line to the data set similar to linear regression. For an arbitrary line in the plane, the (sum of squared) distances to the projections of all the points are calculated and minimized. This has the same effect as minimizing all the distances between the points and the line (Hint: Pythagorean theorem).
+
+3. From the resulting line, we also know what the compositions of PC1 are based on its slope: it contains 4 parts Gene1 plus 1 part Gene2.
+4. PC2 is simply the line perpendicular to PC1. If the data is in 3D, PC2 will be residing in a plane perpendicular to PC1, and the previous steps will be repeated.
+5. Usually we can also know the percentage of total variations explained by each PC. It is often plotted as s Scree plot.
+
+
+
 ## t-SNE: t-distributed Stochastic Neighbor Embedding
 
 ## Comparison
