@@ -4,7 +4,8 @@
 ## Introduction
 When we get a expression matrix from RNA-seq, in which every row is a gene, and every column is a sample, how should we get a general sense of the distribution of the data and how can we know which genes are more important for the expression matrix? 
 
-Take this table as an example. We have the expression level of 4 genes for 6 samples. Since each gene represents one dimension, this table is in the 4 dimentional space. If we want to visualize the entire data table directly, it would be impossible because human beings can only understand plots in 2D or 3D. Usually, the expression matrix from human samples contain around 20,000 genes, in another word, the table is in 20,000 dimensional space. It is essential to have some techiniques that can reduce the dimension of the data while retaining important information within the data.
+Take this table as an example. We have the expression level of 4 genes for 6 samples. Since each gene represents one dimension, this table is in the 4 dimentional space. If we want to visualize the entire data table directly, it would be impossible because human beings can only understand plots in 2D or 3D. 
+
 
 |      |Mouse 1|Mouse 2|Mouse 3|Mouse 4|Mouse 5|Mouse 6|
 |------|-------|-------|-------|-------|-------|-------|
@@ -13,12 +14,12 @@ Take this table as an example. We have the expression level of 4 genes for 6 sam
 |Gene 3|  12   |   9   |   10  |   2.5 |   1.3 |  2    |
 |Gene 4|   5   |   7   |    6  |   2   |     4 |   7   |
 
-Luckily for us, dimensionality reduction techniques such as PCA and t-SNE can map the original data in high dimensional space to lower dimension while retaining some spatial information. In this way, we can easily visualize the data in 2D or 3D space, and reduce the computational burden for downstream analyses with a smaller dataset.
+In addition, there are an estimated 19,000-20,000 human protein-coding genes, in another word, the expression matrices we get from human samples are easily in 20,000 dimensional space. So it is essential to have some techiniques that can reduce the dimension of the data while retaining important information within the data. Luckily for us, dimensionality reduction techniques such as PCA and t-SNE can map the original data in high dimensional space to lower dimension while retaining some spatial information. With these techiniques, we can easily visualize the data in 2D or 3D space, and reduce the computational burden for downstream analyses with a smaller dataset.
 
 
-## PCA
+## PCA: Principle Components Analysis
 
-## T-SNE
+## t-SNE: t-distributed Stochastic Neighbor Embedding
 
 ## Comparison
 
