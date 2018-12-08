@@ -2,9 +2,16 @@
 
 
 ## Introduction
-When we get a expression matrix RNA-seq, in which every row is a gene, and every column is a sample, how should we get a general sense of the distribution of the data in and how can we extract important features (genes) from the data matrix? Note that the expression matrix is in a high dimensional space because every gene is a dimension. So directly visualizing the data is impossible for human beings. Dimensionality reduction techniques such as PCA and t-SNE can map the original data in high dimensional space to lower dimension while retaining some spatial information. In this way, we can easily visualize the data in 2D space. In addition, PCA can return the “importances” of the features (genes), which are the ability of these features in grouping and separating the data points. By extracting the most important genes from the raw data matrix, we are able to explore the data such as performing clustering more easily. 
-  
-![Alt text]("https://github.com/Virginiaxu/183_final_paper/blob/master/pca_1.png")
+When we get a expression matrix from RNA-seq, in which every row is a gene, and every column is a sample, how should we get a general sense of the distribution of the data and how can we extract important features (genes) from the data matrix? 
+Note that the expression matrix is in a high dimensional space because every gene is a dimension. So directly visualizing the data is impossible for human beings. Dimensionality reduction techniques such as PCA and t-SNE can map the original data in high dimensional space to lower dimension while retaining some spatial information. In this way, we can easily visualize the data in 2D space. In addition, PCA can return the “importances” of the features (genes), which are the ability of these features in grouping and separating the data points. By extracting the most important genes from the raw data matrix, we are able to explore the data such as performing clustering more easily. 
+
+|      |Mouse 1|Mouse 2|Mouse 3|Mouse 4|Mouse 5|Mouse 6|
+|------|-------|-------|-------|-------|-------|-------|
+|Gene 1|  10   |  11   |   8   |   3   |   2   |   1   |
+|Gene 2|  6    |   4   |   5   |   3   |  2.8  |    1  |
+|Gene 3|  12   |   9   |   10  |   2.5 |   1.3 |  2    |
+|Gene 4|   5   |   7   |    6  |   2   |     4 |   7   |
+
 
 ## PCA
 
