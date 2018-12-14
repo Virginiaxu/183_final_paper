@@ -69,8 +69,7 @@ After PCA, we could get the "importance" values of each gene based on how each p
 
 tSNE (t-distribution stochastic neighborhood embedding) is a dimensional reduction and visualization technique that usually reduce high dimensional data to a 2D plot to represent and visualize the structure of the original structure. But why do we need to trouble ourselves if PCA is good enough for the dimension reduction task? It turns out that PCA only preserves global structure of the data points and may lose information such as subgroup information. Here we use an exmaple for illustration. 
 
-
-
+![alt text](tsne_1.png)
 
 
 
