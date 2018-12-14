@@ -23,8 +23,12 @@ Principal Components Analysis (PCA) is one of the most common dimensionality red
 
 Mathematically, PCA works by computing eigenvectors and eigenvalues of the data matrix, but to demonstrate intuitively the mechanism, we will use visualization of points in Cartesian coordinate system for a walk through.
 
+### PCA analysis for 2 genes (2D)
 
-1. Let’s take a expression matrix for 6 mouse samples as an example. We will only use two genes for illustration.
+Let’s take a expression matrix mentioned earlier with 6 mouse samples as an example. To begin with, we will demonstrate how PCA works with only gene 1 and gene 2 from the expression matrix. 
+
+
+
 
 2. The data set is first moved so that its center is at origin. Then PCA calculates the top components with the highest variations in the data. What it does is to first fit a line to the data set similar to linear regression. For an arbitrary line in the plane, the (sum of squared) distances to the projections of all the points are calculated and minimized. This has the same effect as minimizing all the distances between the points and the line (Hint: Pythagorean theorem).
 
