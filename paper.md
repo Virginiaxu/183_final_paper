@@ -19,7 +19,10 @@ In addition, there are an estimated 19,000-20,000 human protein-coding genes, in
 
 ## PCA: Principle Components Analysis
 
-PCA is widely used in high dimension calculations such as image processing. PCA is a linear transformation method. It preserves the correlation between point x and y after transformation. PCA can reduce 4 or higher dimension graph to 2D. 
+Principal Components Analysis (PCA) is one of the most common dimensionality reduction methods. It produces a set of linearly uncorrelated variables called principal components, and transform the data from original space to these principle components. The first component is determined by its contribution to the greatest variance in the data. Then all subsequent components are found by the same greatest-variability constraint, while also being orthogonal to the previous one. [1] 
+
+Mathematically, PCA works by computing eigenvectors and eigenvalues of the data matrix, but to demonstrate intuitively the mechanism, we will use visualization of points in Cartesian coordinate system for a walk through.
+
 
 1. Let’s take a expression matrix for 6 mouse samples as an example. We will only use two genes for illustration.
 
@@ -43,4 +46,6 @@ PCA and t-SNE both have advantages and disadvantages. Because of their different
 
 Note that PCA and t-SNE are only two popular dimension reduction methods. There are many more state-of-the-art methods better serving this purpose, such as ICA and UMAP. 
 
+## Reference
+[1]https://blog.treasuredata.com/blog/2016/03/25/dimensionality-reduction-techniques-where-to-begin/
 
