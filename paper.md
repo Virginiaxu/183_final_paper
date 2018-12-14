@@ -3,7 +3,7 @@
 ## Author: Xin Xu, Group 2
 
 
-## Introduction
+## 1. Introduction
 When we get a expression matrix from RNA-seq, in which every row is a gene, and every column is a sample, how should we get a general sense of the distribution of the data and how can we know which genes are more important for the expression matrix? 
 
 Take this table as an example. We have the expression level of 4 genes for 6 samples. Since each gene represents one dimension, this table is in the 4 dimentional space. If we want to visualize the entire data table directly, it would be impossible because human beings can only understand plots in 2D or 3D. 
@@ -18,7 +18,7 @@ Take this table as an example. We have the expression level of 4 genes for 6 sam
 In addition, there are an estimated 19,000-20,000 human protein-coding genes, in another word, the expression matrices we get from human samples are easily in 20,000 dimensional space. So it is essential to have some techiniques that can reduce the dimension of the data while retaining important information within the data. Luckily for us, dimensionality reduction techniques such as PCA and t-SNE can map the original data in high dimensional space to lower dimension while retaining some spatial information. With these techiniques, we can easily visualize the data in 2D or 3D space, and reduce the computational burden for downstream analyses with a smaller dataset.
 
 
-## PCA: Principle Components Analysis
+## 2. PCA: Principle Components Analysis
 
 Principal Components Analysis (PCA) is one of the most common dimensionality reduction methods. It produces a set of linearly uncorrelated variables called principal components, and transform the data from original space to these principle components. The first component is determined by its contribution to the greatest variance in the data. Then all subsequent components are found by the same greatest-variability constraint, while also being orthogonal to the previous one. [1] 
 
@@ -65,9 +65,18 @@ Besides visualization of high dimensional data in low dimensional space. PCA is 
 After PCA, we could get the "importance" values of each gene based on how each principle component is derived. In this table (values are arbitrary just for demonstration), we can see that gene 1 and gene 3 together covers more than 80% of the variances. We know these two genes contribute to the most differences among the 6 mouse samples. And we can discard gene 2 and gene 4 if we want a smaller set for downstream analysis.
 
 
-## t-SNE: t-distributed Stochastic Neighbor Embedding
+## 3. t-SNE: t-distributed Stochastic Neighbor Embedding
 
-## Comparison
+tSNE (t-distribution stochastic neighborhood embedding) is a dimensional reduction and visualization technique that usually reduce high dimensional data to a 2D plot to represent and visualize the structure of the original structure. But why do we need to trouble ourselves if PCA is good enough for the dimension reduction task? It turns out that PCA only preserves global structure of the data points and may lose information such as subgroup information. Here we use an exmaple for illustration. 
+
+
+
+
+
+
+
+
+## 4. Comparison
 
 PCA has the advantages of definite results and fast run time. It is often used in the earlier stage data analysis step to extract important features (genes) for downstream analysis. And since the resulting principle components are linear combinations of original data, the results can be relatively well interpreted. However, as a data visualization method, it often suffers from the “crowding problem”,in which the somewhat similar points in the high dimensional space collapses in 2D space. For data with many outliers, the non-outliers are force to collapse together and the information for the internal variations among the non-outliers is lost in the process. 
 
