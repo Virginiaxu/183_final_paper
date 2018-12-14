@@ -26,19 +26,16 @@ Mathematically, PCA works by computing eigenvectors and eigenvalues of the data 
 ### PCA analysis for 2 genes (2D)
 
 Let’s take a expression matrix mentioned earlier with 6 mouse samples as an example. To begin with, we will demonstrate how PCA works with only gene 1 and gene 2 from the expression matrix. 
-
-1. The data set is first moved so that its center is at origin. Then PCA calculates the top components with the highest variations in the data. What it does is to first fit a line to the data set similar to linear regression. For an arbitrary line in the plane, the (sum of squared) distances to the projections of all the points are calculated and minimized. This has the same effect as minimizing all the distances between the points and the line (Hint: Pythagorean theorem).    
-
+    
 ![alt text](pca_1.png)
 
+1. We start with finding the center of all the points, and move all data points so that the center is located at the origin of the coordinate. 
 
+2. Then PCA calculates the first principal component with the highest variations in the data. What it does is to first fit a line to the data set similar to linear regression. For an arbitrary line in the plane, the sum of squared distances to the projections of all the points are calculated and minimized. This has the same effect as minimizing all the distances between the points and the line (Hint: Pythagorean theorem).
 
+3. After we get PC1, PC2 is simply the line that goes through origin and is perpendicular to PC1.
 
-2. The data set is first moved so that its center is at origin. Then PCA calculates the top components with the highest variations in the data. What it does is to first fit a line to the data set similar to linear regression. For an arbitrary line in the plane, the (sum of squared) distances to the projections of all the points are calculated and minimized. This has the same effect as minimizing all the distances between the points and the line (Hint: Pythagorean theorem).
-
-3. From the resulting line, we also know what the compositions of PC1 are based on its slope: it contains 4 parts Gene1 plus 1 part Gene2.
-4. PC2 is simply the line perpendicular to PC1. If the data is in 3D, PC2 will be residing in a plane perpendicular to PC1, and the previous steps will be repeated.
-5. Usually we can also know the percentage of total variations explained by each PC. It is often plotted as s Scree plot.
+4. For the example of 2 genes, the principle component analysis is now done. We will then remap all the data points using PC1 as the x axis and PC2 as y axis. And we can see from the last image that PC1 covers 83% of variances and PC2 17% of vairances of all data points.
 
 
 
