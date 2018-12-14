@@ -42,7 +42,7 @@ Let’s take a expression matrix mentioned earlier with 6 mouse samples as an ex
 
 We have shown the mechanism of PCA for 2D space, but PCA is mostly useful for dimension reduction of high dimentional data. For expression matrix, we can get more thousands of the genes (each gene is one dimension), but luckily the analysis mechanism is still the same. Here we just use 3 genes for illustration.
 
-![alt text](pca_1.png)
+![alt text](pca_2.png)
 
 1. As shown in the previous section, we move the origin to the center of all points, and the PC1 that capture the most variance is found in the 3D space.
 
