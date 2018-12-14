@@ -1,11 +1,12 @@
 # Machine Learning – Dimension Reduction (PCA & t-SNE)
 
+## Author: Xin Xu, Group 2
+
 
 ## Introduction
 When we get a expression matrix from RNA-seq, in which every row is a gene, and every column is a sample, how should we get a general sense of the distribution of the data and how can we know which genes are more important for the expression matrix? 
 
 Take this table as an example. We have the expression level of 4 genes for 6 samples. Since each gene represents one dimension, this table is in the 4 dimentional space. If we want to visualize the entire data table directly, it would be impossible because human beings can only understand plots in 2D or 3D. 
-
 
 |      |Mouse 1|Mouse 2|Mouse 3|Mouse 4|Mouse 5|Mouse 6|
 |------|-------|-------|-------|-------|-------|-------|
@@ -52,8 +53,16 @@ We have shown the mechanism of PCA for 2D space, but PCA is mostly useful for di
 
 ### Feature selection using PCA
 
+Besides visualization of high dimensional data in low dimensional space. PCA is also wildly used for feature selections to reduce the downstream analysis burden, or to simply find out what genes contribute to the most variances among the samples. 
 
+| Genes|Importance|
+|------|----------|
+|Gene 1|  0.61    |
+|Gene 2|  0.08    |  
+|Gene 3|  0.23    | 
+|Gene 4|  0.08    |  
 
+After PCA, we could get the "importance" values of each gene based on how each principle component is derived. In this table (values are arbitrary just for demonstration), we can see that gene 1 and gene 3 together covers more than 80% of the variances. We know these two genes contribute to the most differences among the 6 mouse samples. And we can discard gene 2 and gene 4 if we want a smaller set for downstream analysis.
 
 
 ## t-SNE: t-distributed Stochastic Neighbor Embedding
