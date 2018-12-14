@@ -38,6 +38,23 @@ Let’s take a expression matrix mentioned earlier with 6 mouse samples as an ex
 4. For the example of 2 genes, the principle component analysis is now done. We will then remap all the data points using PC1 as the x axis and PC2 as y axis. And we can see from the last image that PC1 covers 83% of variances and PC2 17% of vairances of all data points.
 
 
+### PCA analysis for 3 genes (3D)
+
+We have shown the mechanism of PCA for 2D space, but PCA is mostly useful for dimension reduction of high dimentional data. For expression matrix, we can get more thousands of the genes (each gene is one dimension), but luckily the analysis mechanism is still the same. Here we just use 3 genes for illustration.
+
+![alt text](pca_1.png)
+
+1. As shown in the previous section, we move the origin to the center of all points, and the PC1 that capture the most variance is found in the 3D space.
+
+2. We then find PC2 in the plane orthognal to PC1 which also goes throgh the origin. PC2 captures the most variance in this orthognal plane space. 
+
+3. Since we start off with 3D space, PC3 is already determined after finding PC1 and PC2. It is the line that is perpendicular to both PC1 and PC2.
+
+### Feature selection using PCA
+
+
+
+
 
 ## t-SNE: t-distributed Stochastic Neighbor Embedding
 
