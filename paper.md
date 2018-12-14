@@ -75,6 +75,9 @@ Suppose each color indicates the inner structures among data points (for example
 
 
 
+### 
+
+
 
 ## 4. Comparison
 
