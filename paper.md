@@ -67,10 +67,11 @@ After PCA, we could get the "importance" values of each gene based on how each p
 
 ## 3. t-SNE: t-distributed Stochastic Neighbor Embedding
 
-tSNE (t-distribution stochastic neighborhood embedding) is a dimensional reduction and visualization technique that usually reduce high dimensional data to a 2D plot to represent and visualize the structure of the original structure. But why do we need to trouble ourselves if PCA is good enough for the dimension reduction task? It turns out that PCA only preserves global structure of the data points and may lose information such as subgroup information. Here we use an exmaple for illustration. 
+tSNE (t-distribution stochastic neighborhood embedding) is a dimensional reduction and visualization technique that usually reduce high dimensional data to a 2D plot to represent and visualize the structure of the original structure. But why do we need to trouble ourselves if PCA is good enough for the dimension reduction task? It turns out that PCA only preserves global structure of the data points and may lose information such as subgroup information. Here we use an arbitrary exmaple for illustration. 
 
-![alt text](tsne_1.png)
+![alt text](tsne_1.PNG)
 
+Suppose each color indicates the inner structures among data points (for example, cell types in the single cell RNA-seq experiments). We can see that PCA tends to plots all the points together. If we don't have the color information before hand, it would be impossible to see the subgroups. But in the t-SNE plot, different colors are group into different clusters nicely. With this illustration, we can see that t-SNE is suitable for observing sub-structures of the dataset, and in reality it is often used in the single cell RNA-seq for visualization of cell types. 
 
 
 
