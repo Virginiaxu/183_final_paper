@@ -73,9 +73,30 @@ tSNE (t-distribution stochastic neighborhood embedding) is a dimensional reducti
 
 Suppose each color indicates the inner structures among data points (for example, cell types in the single cell RNA-seq experiments). We can see that PCA tends to plots all the points together. If we don't have the color information before hand, it would be impossible to see the subgroups. But in the t-SNE plot, different colors are group into different clusters nicely. With this illustration, we can see that t-SNE is suitable for observing sub-structures of the dataset, and in reality it is often used in the single cell RNA-seq for visualization of cell types. 
 
+![alt text](tsne_2.PNG)
+
+### How does t-SNE works in general
+
+Since t-SNE uses a complex stochastic neighborhood embedding formula, we would not go into detail of its mechanism. But in general, t-SNE only preserves distances between neighbouring points truthfully, and the distances between points from different neighborhood are not preserved. Take the following image as example, only distance between x1 and x2 are preserved, and distance between x1 and x3 and the distance between x2 and x3 are not preserved. 
+
+![alt text](tsne_3.PNG)
+
+In this way, during the dimension reduction process, the points in the same neighborhood will be transformed in a similar fashion, and still be close to each other in the final 2D visualization.
+
+### Hyperparameters for tSNE
+
+Different from PCA, t-SNE analysis has some hyperparameters that are human inputs. Here we will introduce two most important hyperparameters: perplexity and number of iterations, which greatly affect the look of the final 2D plot.
+
+#### (1) Perplexity
+
+Perplexisty represents roughly the number of potential neighbors considered for a cluster. In the figure 
 
 
-### 
+
+#### (2) Number of iterations
+
+
+
 
 
 
