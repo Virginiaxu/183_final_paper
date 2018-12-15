@@ -43,7 +43,7 @@ Let’s take a expression matrix mentioned earlier with 6 mouse samples as an ex
 
 We have shown the mechanism of PCA for 2D space, but PCA is mostly useful for dimension reduction of high dimentional data. For expression matrix, we can get more thousands of the genes (each gene is one dimension), but luckily the analysis mechanism is still the same. Here we just use 3 genes for illustration [1].
 
-![alt text](pca_2.png = 250x250)
+<img src="pca_2.png" alt="drawing" width="500"/>
 
 1. As shown in the previous section, we move the origin to the center of all points, and the PC1 that capture the most variance is found in the 3D space.
 
@@ -118,9 +118,13 @@ Note that PCA and t-SNE are only two popular dimension reduction methods. There 
 ## Reference
 
 [1]https://www.youtube.com/watch?v=FgakZw6K1QQ)
+
 [2]https://blog.treasuredata.com/blog/2016/03/25/dimensionality-reduction-techniques-where-to-begin/
+
 [3]https://www.kaggle.com/puyokw/clustering-in-2-dimension-using-tsne/code
+
 [4]https://www.youtube.com/watch?v=FQmCzpKWD48&list=PLupD_xFct8mHqCkuaXmeXhe0ajNDu0mhZ&index=1
+
 [5]https://www.coursera.org/lecture/fundamentals-machine-learning-in-finance/dimension-reduction-with-tsne-JTUfK 
 
 
