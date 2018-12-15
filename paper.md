@@ -27,9 +27,8 @@ Mathematically, PCA works by computing eigenvectors and eigenvalues of the data 
 ### PCA analysis for 2 genes (2D)
 
 Let’s take a expression matrix mentioned earlier with 6 mouse samples as an example. To begin with, we will demonstrate how PCA works with only gene 1 and gene 2 from the expression matrix [1]. 
-    
-![alt text](pca_1.png)
 
+![alt text](pca_1.png)
 1. We start with finding the center of all the points, and move all data points so that the center is located at the origin of the coordinate. 
 
 2. Then PCA calculates the first principal component with the highest variations in the data. What it does is to first fit a line to the data set similar to linear regression. For an arbitrary line in the plane, the sum of squared distances to the projections of all the points are calculated and minimized. This has the same effect as minimizing all the distances between the points and the line (Hint: Pythagorean theorem).
@@ -44,7 +43,6 @@ Let’s take a expression matrix mentioned earlier with 6 mouse samples as an ex
 We have shown the mechanism of PCA for 2D space, but PCA is mostly useful for dimension reduction of high dimentional data. For expression matrix, we can get more thousands of the genes (each gene is one dimension), but luckily the analysis mechanism is still the same. Here we just use 3 genes for illustration [1].
 
 <img src="pca_2.png" alt="drawing" width="500"/>
-
 1. As shown in the previous section, we move the origin to the center of all points, and the PC1 that capture the most variance is found in the 3D space.
 
 2. We then find PC2 in the plane orthognal to PC1 which also goes throgh the origin. PC2 captures the most variance in this orthognal plane space. 
