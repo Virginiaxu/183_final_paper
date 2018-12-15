@@ -104,6 +104,8 @@ Since there is always some stochasticity in tSNE’s embedding, we need to run m
 
 ## 4. Comparison
 
+![alt text](comparison.png)
+
 PCA has the advantages of definite results and fast run time. It is often used in the earlier stage data analysis step to extract important features (genes) for downstream analysis. And since the resulting principle components are linear combinations of original data, the results can be relatively well interpreted. However, as a data visualization method, it often suffers from the “crowding problem”,in which the somewhat similar points in the high dimensional space collapses in 2D space. For data with many outliers, the non-outliers are force to collapse together and the information for the internal variations among the non-outliers is lost in the process. 
 
 In contrast, t-SNE is computationally expensive and take several hours on million-sample datasets. It is non-deterministic, different run would renter different results, and by providing different perplexity, the resulting clusters would change dramatically. But, as a visualization method, it can relatively show the internal structures of the data well since it preserves the local neighborhood information of the original data in high-dimensional space.
@@ -113,5 +115,11 @@ PCA and t-SNE both have advantages and disadvantages. Because of their different
 Note that PCA and t-SNE are only two popular dimension reduction methods. There are many more state-of-the-art methods better serving this purpose, such as ICA and UMAP. 
 
 ## Reference
+
+[1]https://www.youtube.com/watch?v=FgakZw6K1QQ)
 [1]https://blog.treasuredata.com/blog/2016/03/25/dimensionality-reduction-techniques-where-to-begin/
+https://www.biostars.org/p/295174/
+http://www.jmlr.org/papers/volume9/vandermaaten08a/vandermaaten08a.pdf
+https://www.coursera.org/lecture/fundamentals-machine-learning-in-finance/dimension-reduction-with-tsne-JTUfK 
+
 
