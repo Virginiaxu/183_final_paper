@@ -14,6 +14,7 @@ Take this table as an example. We have the expression level of 4 genes for 6 sam
 |Gene 2|  6    |   4   |   5   |   3   |  2.8  |    1  |
 |Gene 3|  12   |   9   |   10  |   2.5 |   1.3 |  2    |
 |Gene 4|   5   |   7   |    6  |   2   |     4 |   7   |
+[1]
 
 In addition, there are an estimated 19,000-20,000 human protein-coding genes, in another word, the expression matrices we get from human samples are easily in 20,000 dimensional space. So it is essential to have some techiniques that can reduce the dimension of the data while retaining important information within the data. Luckily for us, dimensionality reduction techniques such as PCA and t-SNE can map the original data in high dimensional space to lower dimension while retaining some spatial information. With these techiniques, we can easily visualize the data in 2D or 3D space, and reduce the computational burden for downstream analyses with a smaller dataset.
 
