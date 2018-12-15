@@ -20,15 +20,15 @@ In addition, there are an estimated 19,000-20,000 human protein-coding genes, in
 
 ## 2. PCA: Principle Components Analysis
 
-Principal Components Analysis (PCA) is one of the most common dimensionality reduction methods. It produces a set of linearly uncorrelated variables called principal components, and transform the data from original space to these principle components. The first component is determined by its contribution to the greatest variance in the data. Then all subsequent components are found by the same greatest-variability constraint, while also being orthogonal to the previous one. [1] 
+Principal Components Analysis (PCA) is one of the most common dimensionality reduction methods. It produces a set of linearly uncorrelated variables called principal components, and transform the data from original space to these principle components. The first component is determined by its contribution to the greatest variance in the data. Then all subsequent components are found by the same greatest-variability constraint, while also being orthogonal to the previous one. [2] 
 
 Mathematically, PCA works by computing eigenvectors and eigenvalues of the data matrix, but to demonstrate intuitively the mechanism, we will use visualization of points in Cartesian coordinate system for a walk through.
 
 ### PCA analysis for 2 genes (2D)
 
-Let’s take a expression matrix mentioned earlier with 6 mouse samples as an example. To begin with, we will demonstrate how PCA works with only gene 1 and gene 2 from the expression matrix. 
+Let’s take a expression matrix mentioned earlier with 6 mouse samples as an example. To begin with, we will demonstrate how PCA works with only gene 1 and gene 2 from the expression matrix [1]. 
     
-![1](pca_1.png)
+![alt text](pca_1.png)
 
 1. We start with finding the center of all the points, and move all data points so that the center is located at the origin of the coordinate. 
 
@@ -41,7 +41,7 @@ Let’s take a expression matrix mentioned earlier with 6 mouse samples as an ex
 
 ### PCA analysis for 3 genes (3D)
 
-We have shown the mechanism of PCA for 2D space, but PCA is mostly useful for dimension reduction of high dimentional data. For expression matrix, we can get more thousands of the genes (each gene is one dimension), but luckily the analysis mechanism is still the same. Here we just use 3 genes for illustration.
+We have shown the mechanism of PCA for 2D space, but PCA is mostly useful for dimension reduction of high dimentional data. For expression matrix, we can get more thousands of the genes (each gene is one dimension), but luckily the analysis mechanism is still the same. Here we just use 3 genes for illustration [1].
 
 ![alt text](pca_2.png)
 
@@ -67,7 +67,7 @@ After PCA, we could get the "importance" values of each gene based on how each p
 
 ## 3. t-SNE: t-distributed Stochastic Neighbor Embedding
 
-tSNE (t-distribution stochastic neighborhood embedding) is a dimensional reduction and visualization technique that usually reduce high dimensional data to a 2D plot to represent and visualize the structure of the original structure. But why do we need to trouble ourselves if PCA is good enough for the dimension reduction task? It turns out that PCA only preserves global structure of the data points and may lose information such as subgroup information. Here we use an arbitrary exmaple for illustration. 
+tSNE (t-distribution stochastic neighborhood embedding) is a dimensional reduction and visualization technique that usually reduce high dimensional data to a 2D plot to represent and visualize the structure of the original structure. But why do we need to trouble ourselves if PCA is good enough for the dimension reduction task? It turns out that PCA only preserves global structure of the data points and may lose information such as subgroup information. Here we use an arbitrary exmaple [3] for illustration. 
 
 ![alt text](tsne_1.PNG)
 
@@ -77,7 +77,7 @@ Suppose each color indicates the inner structures among data points (for example
 
 ### How does t-SNE works in general
 
-Since t-SNE uses a complex stochastic neighborhood embedding formula, we would not go into detail of its mechanism. But in general, t-SNE only preserves distances between neighbouring points truthfully, and the distances between points from different neighborhood are not preserved. Take the following image as example, only distance between x1 and x2 are preserved, and distance between x1 and x3 and the distance between x2 and x3 are not preserved. 
+Since t-SNE uses a complex stochastic neighborhood embedding formula, we would not go into detail of its mechanism. But in general, t-SNE only preserves distances between neighbouring points truthfully, and the distances between points from different neighborhood are not preserved. Take the following image [4] as example, only distance between x1 and x2 are preserved, and distance between x1 and x3 and the distance between x2 and x3 are not preserved. 
 
 ![alt text](tsne_3.png)
 
@@ -105,6 +105,7 @@ Since there is always some stochasticity in tSNE’s embedding, we need to run m
 ## 4. Comparison
 
 ![alt text](comparison.png)
+[5]
 
 PCA has the advantages of definite results and fast run time. It is often used in the earlier stage data analysis step to extract important features (genes) for downstream analysis. And since the resulting principle components are linear combinations of original data, the results can be relatively well interpreted. However, as a data visualization method, it often suffers from the “crowding problem”,in which the somewhat similar points in the high dimensional space collapses in 2D space. For data with many outliers, the non-outliers are force to collapse together and the information for the internal variations among the non-outliers is lost in the process. 
 
@@ -117,9 +118,9 @@ Note that PCA and t-SNE are only two popular dimension reduction methods. There 
 ## Reference
 
 [1]https://www.youtube.com/watch?v=FgakZw6K1QQ)
-[1]https://blog.treasuredata.com/blog/2016/03/25/dimensionality-reduction-techniques-where-to-begin/
-https://www.biostars.org/p/295174/
-http://www.jmlr.org/papers/volume9/vandermaaten08a/vandermaaten08a.pdf
-https://www.coursera.org/lecture/fundamentals-machine-learning-in-finance/dimension-reduction-with-tsne-JTUfK 
+[2]https://blog.treasuredata.com/blog/2016/03/25/dimensionality-reduction-techniques-where-to-begin/
+[3]https://www.kaggle.com/puyokw/clustering-in-2-dimension-using-tsne/code
+[4]https://www.youtube.com/watch?v=FQmCzpKWD48&list=PLupD_xFct8mHqCkuaXmeXhe0ajNDu0mhZ&index=1
+[5]https://www.coursera.org/lecture/fundamentals-machine-learning-in-finance/dimension-reduction-with-tsne-JTUfK 
 
 
