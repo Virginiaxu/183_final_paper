@@ -97,13 +97,9 @@ This reminds us to try different perplexity parameters until a reasonable and cl
 
 #### (2) Number of iterations
 
-Since there is always some stochasticity in tSNE’s embedding, we need to run multiple iterations to improve it. As shown in the image below, 
+Since there is always some stochasticity in tSNE’s embedding, we need to run multiple iterations to improve it. As shown in the image below, the embedding improves, with some randomness, from iteration to iteration. And with only a few iterations (from 1 to 30) t-SNE results do not converge, but with more iterations (100 to 300), the plots stablizes. 
 
 ![alt text](tsne_5.PNG)
-
-
-
-
 
 
 ## 4. Comparison
