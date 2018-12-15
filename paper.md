@@ -79,7 +79,7 @@ Suppose each color indicates the inner structures among data points (for example
 
 Since t-SNE uses a complex stochastic neighborhood embedding formula, we would not go into detail of its mechanism. But in general, t-SNE only preserves distances between neighbouring points truthfully, and the distances between points from different neighborhood are not preserved. Take the following image [4] as example, only distance between x1 and x2 are preserved, and distance between x1 and x3 and the distance between x2 and x3 are not preserved. 
 
-<img src="tsne_3.png" alt="drawing" width="500"/>
+![alt text](tsne_3.png)
 
 In this way, during the dimension reduction process, the points in the same neighborhood will be transformed in a similar fashion, and still be close to each other in the final 2D visualization.
 
